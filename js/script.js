@@ -45,7 +45,7 @@ const bookResult = books => {
         noResultDiv.textContent = '';
 
     }
-
+    /* Total result output area */
     const totalFound = document.getElementById('total-books');
     totalFound.innerHTML = `<h3 class="text-center text-info">Total result found :-${books.numFound}</h3>`;
     const allBooks = books.docs;
@@ -55,7 +55,6 @@ const bookResult = books => {
     erroDiv.textContent = '';
     allBooks.forEach(book => {
         const newDiv = document.createElement('div');
-        newDiv.classList.add('g-4')
         newDiv.innerHTML = `
                 <div class="col card py-4">
                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg?images/default" class="card-img-top" alt="...">
