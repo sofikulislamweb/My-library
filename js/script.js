@@ -32,10 +32,14 @@ const bookInput = () => {
 /* Book result output */
 
 const bookResult = books => {
+
     if (books.numFound === 0) {
         noResultDiv.innerHTML = `<h5 class="text-center card-title text-danger">No result found</h5>`
+        const totalFound = document.getElementById('total-books');
+        totalFound.textContent = '';
+        const myBooks = document.getElementById('books-result');
+        myBooks.textContent = '';
         return;
-
     }
     else {
         noResultDiv.textContent = '';
@@ -51,6 +55,7 @@ const bookResult = books => {
     erroDiv.textContent = '';
     allBooks.forEach(book => {
         const newDiv = document.createElement('div');
+        newDiv.classList.add('g-4')
         newDiv.innerHTML = `
                 <div class="col card py-4">
                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg?images/default" class="card-img-top" alt="...">
