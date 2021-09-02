@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>My Book gallaries</title>
+</head>
+
+<body>
+    <!-- input search area start here -->
+
+    <div class="input-group mb-3 w-50 mx-auto p-5">
+        <input id="input-field" type="text" class="form-control" placeholder="Search your book here"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button onclick="bookInput()" class="btn btn-outline-success" type="button"
+                id="button-addon2">Button</button>
+        </div>
+    </div>
+
+    <!-- search error here-->
+
+    <div id="error-div" class="card w-50 mx-auto" style="width: 18rem;">
+    </div>
+
+    <!-- Book result area -->
+    <div id="empty"></div>
+    <div id="total-books" class="w-50 mx-auto"></div>
+    <div id="books-result" class="col row row-cols-1 gx-2 row-cols-md-4 p-4 m-2 g-4"></div>
+
+    <!-- javascript link here -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
